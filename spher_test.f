@@ -632,40 +632,40 @@ C  CALCULATION OF THE EXPANSION COEFFICIENTS  *******************
                                                                                 
 C  PRINTOUT   **********************************************************        
                                                                                 
-  450 PRINT 504,R1,R2                                                           
-  504 FORMAT ('R1 =',d12.6,'   R2=',d12.6)                                    
-      PRINT 515, REFF,VEFF                                              
-  515 FORMAT ('REFF=',d12.6,'   VEFF=',d12.6)      
-      PRINT 500,LAM,MRR,MRII                                     
-  500 FORMAT('LAM =',F 8.4,'  MRR=',F7.3,'  MRI=',F8.5)            
-  505 FORMAT (' X1 =',d12.6,'   X2=',d12.6)                                    
-      PRINT 506,NK,N,NP   
-  506 FORMAT('NK=',I4,'   N=',I4,'   NP=',I4)  
-      Q1=AL1(2)/3D0                                                             
-      PRINT 511,Q1                                                         
-  511 FORMAT('<COS> =',d12.6)                                
-      PRINT 508,CEXT,CSCA,ALB                                                  
-  508 FORMAT('CEXT=',d12.6,'   CSCA=',d12.6,'   ALBEDO =',d12.6)    
-      PRINT 555,M                                                               
-      PRINT 550                                                                 
-      PRINT 510                                                                 
-  510 FORMAT('*********   EXPANSION COEFFICIENTS   *********')                  
-  570 FORMAT('   S     ALPHA 1    ALPHA 2    ALPHA 3',          
-     *'    ALPHA 4     BETA 1     BETA 2')                       
-      PRINT 570                                                                 
-      DO 520 L=1,L1MAX                                                          
-         LL=L-1                                                                 
-         PRINT 728,LL,AL1(L),AL2(L),AL3(L),AL4(L),BET1(L),BET2(L)               
-  520 CONTINUE                                                                  
-  728 FORMAT(I4,1X,6F11.5)
-  550 FORMAT(' ')                                                               
-  555 FORMAT('MAXIMAL ORDER OF MIE COEFFICIENTS = ',I4)                       
-      WRITE (10,580) ALB,L1MAX
-      DO L=1,L1MAX
-         WRITE (10,575) AL1(L),AL2(L),AL3(L),AL4(L),BET1(L),BET2(L)           
-      ENDDO   
-  575 FORMAT(6D15.7)
-  580 FORMAT(D14.8,I8)
+C  450 PRINT 504,R1,R2                                                           
+C  504 FORMAT ('R1 =',d12.6,'   R2=',d12.6)                                    
+C      PRINT 515, REFF,VEFF                                              
+C  515 FORMAT ('REFF=',d12.6,'   VEFF=',d12.6)      
+C      PRINT 500,LAM,MRR,MRII                                     
+C  500 FORMAT('LAM =',F 8.4,'  MRR=',F7.3,'  MRI=',F8.5)            
+C  505 FORMAT (' X1 =',d12.6,'   X2=',d12.6)                                    
+C      PRINT 506,NK,N,NP   
+C  506 FORMAT('NK=',I4,'   N=',I4,'   NP=',I4)  
+C      Q1=AL1(2)/3D0                                                             
+C      PRINT 511,Q1                                                         
+C  511 FORMAT('<COS> =',d12.6)                                
+C      PRINT 508,CEXT,CSCA,ALB                                                  
+C  508 FORMAT('CEXT=',d12.6,'   CSCA=',d12.6,'   ALBEDO =',d12.6)    
+C      PRINT 555,M                                                               
+C      PRINT 550                                                                 
+C      PRINT 510                                                                 
+C  510 FORMAT('*********   EXPANSION COEFFICIENTS   *********')                  
+C  570 FORMAT('   S     ALPHA 1    ALPHA 2    ALPHA 3',          
+C     *'    ALPHA 4     BETA 1     BETA 2')                       
+C      PRINT 570                                                                 
+C      DO 520 L=1,L1MAX                                                          
+C         LL=L-1                                                                 
+C         PRINT 728,LL,AL1(L),AL2(L),AL3(L),AL4(L),BET1(L),BET2(L)               
+C  520 CONTINUE                                                                  
+C  728 FORMAT(I4,1X,6F11.5)
+C  550 FORMAT(' ')                                                               
+C  555 FORMAT('MAXIMAL ORDER OF MIE COEFFICIENTS = ',I4)                       
+C      WRITE (10,580) ALB,L1MAX
+C      DO L=1,L1MAX
+C         WRITE (10,575) AL1(L),AL2(L),AL3(L),AL4(L),BET1(L),BET2(L)           
+C      ENDDO   
+C  575 FORMAT(6D15.7)
+C  580 FORMAT(D14.8,I8)
       RETURN                                                                    
       END                                                                       
                                                                                 
@@ -912,7 +912,7 @@ C**********************************************************
  1200 FORMAT(' ',4X,'X(',I4,') = ',F17.14,5X,'W(',I4,') = ',F17.14)
       GO TO 115
   110 CONTINUE
-C     PRINT 1300,N
+     PRINT 1300,N
  1300 FORMAT(' GAUSSIAN QUADRATURE FORMULA OF ',I4,'-TH ORDER IS USED')
   115 CONTINUE
       IF(IND1.EQ.0) GO TO 140
