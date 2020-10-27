@@ -632,40 +632,7 @@ C  CALCULATION OF THE EXPANSION COEFFICIENTS  *******************
                                                                                 
 C  PRINTOUT   **********************************************************        
                                                                                 
-  450 PRINT 504,R1,R2                                                           
-  504 FORMAT ('R1 =',d12.6,'   R2=',d12.6)                                    
-      PRINT 515, REFF,VEFF                                              
-  515 FORMAT ('REFF=',d12.6,'   VEFF=',d12.6)      
-      PRINT 500,LAM,MRR,MRII                                     
-  500 FORMAT('LAM =',F 8.4,'  MRR=',F7.3,'  MRI=',F8.5)            
-  505 FORMAT (' X1 =',d12.6,'   X2=',d12.6)                                    
-      PRINT 506,NK,N,NP   
-  506 FORMAT('NK=',I4,'   N=',I4,'   NP=',I4)  
-      Q1=AL1(2)/3D0                                                             
-      PRINT 511,Q1                                                         
-  511 FORMAT('<COS> =',d12.6)                                
-      PRINT 508,CEXT,CSCA,ALB                                                  
-  508 FORMAT('CEXT=',d12.6,'   CSCA=',d12.6,'   ALBEDO =',d12.6)    
-      PRINT 555,M                                                               
-      PRINT 550                                                                 
-      PRINT 510                                                                 
-  510 FORMAT('*********   EXPANSION COEFFICIENTS   *********')                  
-  570 FORMAT('   S     ALPHA 1    ALPHA 2    ALPHA 3',          
-     *'    ALPHA 4     BETA 1     BETA 2')                       
-      PRINT 570                                                                 
-      DO 520 L=1,L1MAX                                                          
-         LL=L-1                                                                 
-         PRINT 728,LL,AL1(L),AL2(L),AL3(L),AL4(L),BET1(L),BET2(L)               
-  520 CONTINUE                                                                  
-  728 FORMAT(I4,1X,6F11.5)
-  550 FORMAT(' ')                                                               
-  555 FORMAT('MAXIMAL ORDER OF MIE COEFFICIENTS = ',I4)                       
-      WRITE (10,580) ALB,L1MAX
-      DO L=1,L1MAX
-         WRITE (10,575) AL1(L),AL2(L),AL3(L),AL4(L),BET1(L),BET2(L)           
-      ENDDO   
-  575 FORMAT(6D15.7)
-  580 FORMAT(D14.8,I8)
+
       RETURN                                                                    
       END                                                                       
                                                                                 
